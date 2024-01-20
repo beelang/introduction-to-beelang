@@ -1,21 +1,21 @@
 Introduction
 ============
 
-This book acts as an introduction to the programming language named Dragon. The Your First Program chapter will teach you how to write your first Dragon program. It's perfect for people new to programming. More advanced programmers will want to skim that chapter.
+This book acts as an introduction to the programming language named bee. The Your First Program chapter will teach you how to write your first bee program. It's perfect for people new to programming. More advanced programmers will want to skim that chapter.
 
-Dragon is an language focusing on simplicity in written intent. It's goals are threefold:
+bee is an language focusing on simplicity in written intent. It's goals are threefold:
 
   1. Be unsurprising.
   2. Make compartmentalization easy.
   3. Strive to allow building complex things that can rest on simple foundations.
 
-In more dry terms Dragon:
+In more dry terms bee:
 
-  - Dragon has actors
-  - Dragon has immutability
-  - Dragon has functions
-  - Dragon has streams
-  - Dragon has objects
+  - bee has actors
+  - bee has immutability
+  - bee has functions
+  - bee has streams
+  - bee has objects
 
 Here's what a labeling a value looks like:
 
@@ -48,7 +48,7 @@ greeting()
 #=> "My name is Kurtis Rainbolt-Greene and I'm age 27."
 ```
 
-Alright, while that's probably a weird and new syntax lets keep going. Your program is more complex. You want to define multiple behaviors and keep them co-located. In Dragon we call these centers Objects and they are wrappers around streams:
+Alright, while that's probably a weird and new syntax lets keep going. Your program is more complex. You want to define multiple behaviors and keep them co-located. In bee we call these centers Objects and they are wrappers around streams:
 
 ``` coffee
 Person: Object clone()
@@ -74,7 +74,7 @@ jordan greeting()
 
 By defining the `Person` object you've created a stream for those types of objects. Any new object created within that `Person` becomes an event on the stream. By "creating" a new person as `jordan` you essentially created a unique identifier that can be watched for on the stream. When you "changed" the name of `jordan` you didn't mutate the object, you put a new event on the stream with the identifier and the data changed, and replaced the old object with the new person using the same data. The `greeting` function you defined is an event handler. Whenever an event on the `Person` stream with the matching id the object it's resting on, and the values defined in the function definition have changed, then it reevaluates.
 
-Here is a sample Dragon program:
+Here is a sample bee program:
 
 ```
 # First we assign the twitter client library to a local constant:
